@@ -2,16 +2,17 @@ import * as yup from "yup";
 import { validation, loginPage as strings } from "../../../constants/strings";
 
 const loginSchema = yup.object().shape({
-    email: yup
-        .string(validation.stringMessage.replace(":field", strings.email))
+    username: yup
+        .string(validation.stringMessage.replace(":field", strings.username))
         .max(
             50,
             validation.maxMessage
-                .replace(":field", strings.email)
+                .replace(":field", strings.username)
                 .replace(":max", "50")
         )
-        .email(validation.emailMessage.replace(":field", strings.email))
-        .required(validation.requiredMessage.replace(":field", strings.email)),
+        .required(
+            validation.requiredMessage.replace(":field", strings.username)
+        ),
     password: yup
         .string(validation.stringMessage.replace(":field", strings.password))
         .min(

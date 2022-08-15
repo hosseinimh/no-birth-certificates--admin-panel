@@ -3587,125 +3587,127 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "viewUserPage": () => (/* binding */ viewUserPage)
 /* harmony export */ });
 var layout = {
-  brand: "Project"
+  brand: "فاقدین"
 };
 var general = {
-  brand: "Project",
-  add: "Add",
-  edit: "Edit",
-  remove: "Delete",
-  view: "View",
-  search: "Searcg",
-  cancel: "Cancel",
-  back: "Back",
-  first: "First",
-  previous: "Previous",
-  next: "Next",
-  last: "Last",
-  records: "Record(s)",
-  actions: "Actions",
-  yes: "Yes",
-  no: "No",
-  submit: "Submit",
-  admin: "Admin",
-  itemNotFound: "Item was not found.",
-  noDataFound: "No data found.",
-  noPermission: "You don't have permission to access this section."
+  brand: "فاقدین",
+  add: "افزودن",
+  edit: "ویرایش",
+  remove: "حذف",
+  view: "نمایش",
+  search: "جستجو",
+  cancel: "لغو",
+  back: "بازگشت",
+  first: "اولین",
+  previous: "قبلی",
+  next: "بعدی",
+  last: "آخرین",
+  records: "رکورد(ها)",
+  actions: "عملیات",
+  yes: "بله",
+  no: "خیر",
+  submit: "ثبت",
+  admin: "مدیر",
+  up: "بالا",
+  down: "پایین",
+  itemNotFound: "آیتم یافت نشد.",
+  noDataFound: "اطلاعاتی یافت نشد.",
+  noPermission: "شما مجوز ورود به این بخش را ندارید."
 };
 var loginHeader = {
-  text1: "Home"
+  text1: "خانه"
 };
 var footer = {
-  text1: "Project",
-  text2: "https://hosseinimh.com",
-  text3: "Address",
-  text4: "Iran",
-  text5: "Phone",
-  text6: "021-11-11-1111",
-  text7: "Social networks",
-  text8: "@hosseinimh",
-  text9: "Project",
-  text14: "All rights reserved.",
-  text15: "Mahmoud Hosseini",
-  loading: "Please wait ..."
+  text1: "فاقدین",
+  text2: "https://127.0.0.1:8000",
+  text3: "آدرس",
+  text4: "ایران",
+  text5: "شماره تماس",
+  text6: "0915-529-5009",
+  text7: "",
+  text8: "",
+  text9: "فاقدین",
+  text14: "کلیه حقوق محفوظ است.",
+  text15: "محمود حسینی",
+  loading: "لطفا منتظر بمانید ..."
 };
 var utils = {
-  notValidJson: "not a valid json"
+  notValidJson: "فایل دریافتی نامعتبر است."
 };
 var validation = {
-  numberMessage: ":field must be number.",
-  stringMessage: ":field must be string.",
-  emailMessage: ":field must be a valid Email.",
-  minMessage: "Min length of :field is :min charachters.",
-  minDigitMessage: "Min length of :field is :min digits.",
-  minNumberMessage: ":field shouold be greater than :min.",
-  ltMessage: ":field should be less than :max.",
-  lteMessage: ":field value should be equal or less than :max.",
-  gtMessage: ":field value should be greater than :min.",
-  gteMessage: ":field value should be equal or greater than :min.",
-  maxMessage: "Max length of :field is :max characters.",
-  maxDigitMessage: "Max length of :field is :max digits.",
-  requiredMessage: "Please enter :field value.",
-  validMessage: "Please enter a valid value for :field.",
-  confirmedMessage: ":field does not match with its confirmation."
+  numberMessage: ":field تنها باید شامل اعداد باشد.",
+  stringMessage: ":field تنها باید شامل حروف باشد.",
+  minMessage: "حداقل طول فیلد :field، :min حرف است.",
+  minDigitMessage: "حداقل طول فیلد :field، :min رقم است.",
+  minNumberMessage: ":field باید بزرگ تر از :min باشد.",
+  ltMessage: "مقدار فیلد :field، باید کمتر از :max باشد.",
+  lteMessage: "مقدار فیلد :field، باید برابر یا کمتر از :max باشد.",
+  gtMessage: "مقدار فیلد :field، باید بزرگتر از :min باشد.",
+  gteMessage: "مقدار فیلد :field، باید برابر یا بزرگتر از :min باشد.",
+  maxMessage: "حداکثر طول فیلد :field، :max حرف است.",
+  maxDigitMessage: "حداکثر طول فیلد :field، :max رقم است.",
+  requiredMessage: "لطفا :field را وارد نمایید.",
+  validMessage: "لطفا :field را به درستی وارد نمایید.",
+  confirmedMessage: ":field با تاییدیه اش مطابقت نمی نماید."
 };
 var header = {
-  home: "Home",
-  changePassword: "Change password",
-  editUser: "Edit user",
-  viewUser: "View profile",
-  logout: "Logout"
+  home: "خانه",
+  changePassword: "تغییر کلمه عبور",
+  editUser: "ویرایش کاربر",
+  viewUser: "مشاهده کاربر",
+  logout: "خروج کاربری"
 };
 var sidebar = {
-  dashboard: "Dashboard",
-  editProfile: "Edit profile",
-  users: "Users",
-  changePassword: "Change password",
-  editUser: "Edit profile",
-  viewUser: "View profile",
-  logout: "Logout"
+  dashboard: "داشبورد",
+  editProfile: "ویرایش پروفایل",
+  users: "کاربران",
+  plates: "پلاک‌ها",
+  changePassword: "تغییر کلمه عبور",
+  editUser: "ویرایش کاربر",
+  viewUser: "مشاهده کاربر",
+  logout: "خروج کاربری"
 };
 var loginPage = {
-  _title: "Login",
-  description: "Please enter Email and Password.",
-  email: "Email",
-  password: "Password"
+  _title: "ورود کاربری",
+  description: "لطفا نام کاربری و کلمه عبور خود را وارد نمائید.",
+  username: "نام کاربری",
+  password: "کلمه عبور"
 };
 var dashboardPage = {
-  _title: "Dashboard",
-  users: "Users"
+  _title: "داشبورد",
+  users: "کاربران",
+  plates: "پلاک‌ها"
 };
 var usersPage = {
-  _title: "Users",
-  name: "Name",
-  family: "Family",
-  email: "Email",
-  nameFamily: "Name / Family",
-  searchSubmit: "Search",
-  changePassword: "Change password"
+  _title: "کاربران",
+  name: "نام",
+  family: "نام خانوادگی",
+  username: "نام کاربری",
+  nameFamily: "نام / نام خانوادگی",
+  searchSubmit: "جستجو",
+  changePassword: "تغییر کلمه عبور"
 };
 var viewUserPage = {
-  _title: "View profile",
-  email: "Email",
-  name: "Name",
-  family: "Family"
+  _title: "نمایش کاربر",
+  username: "نام کاربری",
+  name: "نام",
+  family: "نام خانوادگی"
 };
 var editUserPage = {
-  _title: "Edit user",
-  email: "Email",
-  emailPlaceholder: "user@email.com",
-  name: "Name",
-  namePlaceholder: "Ex. John",
-  family: "Family",
-  familyPlaceholder: "Ex. Doe",
-  submitted: "User edited successfully."
+  _title: "ویرایش کاربر",
+  username: "نام کاربری",
+  usernamePlaceholder: "617994",
+  name: "نام",
+  namePlaceholder: "نام",
+  family: "نام خانوادگی",
+  familyPlaceholder: "نام خانوادگی",
+  submitted: "ویرایش کاربر با موفقیت انجام گردید."
 };
 var changePasswordPage = {
-  _title: "Change password",
-  newPassword: "New password",
-  newPasswordPlaceholder: "4-digit",
-  confirmPassword: "Confirm password",
-  submitted: "Password changed successfully."
+  _title: "تغییر کلمه عبور",
+  newPassword: "کلمه عبور جدید",
+  confirmPassword: "تایید کلمه عبور جدید",
+  submitted: "تغییر کلمه عبور با موفقیت انجام گردید."
 };
 
 /***/ }),
@@ -7400,7 +7402,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var loginSchema = yup__WEBPACK_IMPORTED_MODULE_0__.object().shape({
-  email: yup__WEBPACK_IMPORTED_MODULE_0__.string(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.stringMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.email)).max(50, _constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.maxMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.email).replace(":max", "50")).email(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.emailMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.email)).required(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.requiredMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.email)),
+  username: yup__WEBPACK_IMPORTED_MODULE_0__.string(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.stringMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.username)).max(50, _constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.maxMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.username).replace(":max", "50")).required(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.requiredMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.username)),
   password: yup__WEBPACK_IMPORTED_MODULE_0__.string(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.stringMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.password)).min(4, _constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.minMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.password).replace(":min", "4")).max(4, _constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.maxMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.password).replace(":max", "4")).required(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.requiredMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.loginPage.password))
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loginSchema);
@@ -7423,7 +7425,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var userSearchSchema = yup__WEBPACK_IMPORTED_MODULE_0__.object().shape({
-  email: yup__WEBPACK_IMPORTED_MODULE_0__.string(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.stringMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.usersPage.email)).max(50, _constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.maxMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.usersPage.email).replace(":max", "50")),
+  username: yup__WEBPACK_IMPORTED_MODULE_0__.string(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.stringMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.usersPage.username)).max(50, _constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.maxMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.usersPage.username).replace(":max", "50")),
   nameFamily: yup__WEBPACK_IMPORTED_MODULE_0__.string(_constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.stringMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.usersPage.nameFamily)).max(50, _constants_strings__WEBPACK_IMPORTED_MODULE_1__.validation.maxMessage.replace(":field", _constants_strings__WEBPACK_IMPORTED_MODULE_1__.usersPage.nameFamily).replace(":max", "50"))
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (userSearchSchema);
