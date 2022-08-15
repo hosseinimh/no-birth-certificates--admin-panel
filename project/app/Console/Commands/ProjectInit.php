@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Helpers\Helper;
+use App\Models\Student;
 use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
@@ -66,9 +67,12 @@ class ProjectInit extends Command
         User::factory()->create();
         $this->info('1 user was created successfully.');
 
+        Student::factory()->count(100)->create();
+        $this->info('100 students were created successfully.');
+
         $this->info('');
         $this->info('****');
-        $this->line('Email: user@email.com');
+        $this->line('Username: 991061');
         $this->line('Password: 1234');
         $this->info('****');
         $this->info('');

@@ -19,19 +19,10 @@ export const USERS_API_URLS = {
     CHANGE_PASSWORD: `${SERVER_URL}/users/change_password`,
 };
 
-export const CATEGORIES_API_URLS = {
-    FETCH_CATEGORY: `${SERVER_URL}/categories/show`,
-    FETCH_CATEGORIES: `${SERVER_URL}/categories`,
-    FETCH_ALL_CATEGORIES: `${SERVER_URL}/categories/get_all`,
-    STORE_CATEGORY: `${SERVER_URL}/categories/store`,
-    UPDATE_CATEGORY: `${SERVER_URL}/categories/update`,
-    REMOVE_CATEGORY: `${SERVER_URL}/categories/remove`,
-};
-
-export const BOOKS_API_URLS = {
-    FETCH_BOOK: `${SERVER_URL}/books/show`,
-    FETCH_BOOKS: `${SERVER_URL}/books`,
-    STORE_BOOK: `${SERVER_URL}/books/store`,
-    UPDATE_BOOK: `${SERVER_URL}/books/update`,
-    REMOVE_BOOK: `${SERVER_URL}/books/remove`,
+export const STUDENTS_API_URLS = {
+    FETCH_STUDENT: `${SERVER_URL}/students/show`,
+    FETCH_STUDENTS: `${SERVER_URL}/students`,
+    STORE_STUDENT: `${SERVER_URL}/students/store`,
+    UPDATE_STUDENT: `${SERVER_URL}/students/update`,
+    REMOVE_STUDENT: `${SERVER_URL}/students/remove`,
 };

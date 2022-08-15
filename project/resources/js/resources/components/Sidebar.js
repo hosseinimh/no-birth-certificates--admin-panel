@@ -103,6 +103,21 @@ function Sidebar() {
                     {strings.users}
                 </Link>
             </li>
+            <li className="nav-item">
+                <Link
+                    className={
+                        page === "Sudents" ? "nav-link active" : "nav-link"
+                    }
+                    to={`${basePath}/students`}
+                >
+                    <svg className="nav-icon">
+                        <use
+                            xlinkHref={`${vendorsPath}/@coreui/icons/svg/free.svg#cil-group`}
+                        ></use>
+                    </svg>
+                    {strings.students}
+                </Link>
+            </li>
         </>
     );
 

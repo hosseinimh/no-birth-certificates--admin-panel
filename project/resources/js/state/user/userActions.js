@@ -17,12 +17,12 @@ export const FETCH_LOGOUT_REQUEST_ACTION = "FETCH_LOGOUT_REQUEST_ACTION";
 export const CLEAR_LOGIN_REQUEST_ACTION = "CLEAR_LOGIN_REQUEST_ACTION";
 
 export const fetchLoginAction =
-    (email, password, type) => async (dispatch, getState) => {
+    (username, password) => async (dispatch, getState) => {
         dispatch({ type: FETCH_LOGIN_REQUEST_ACTION });
 
         try {
             const response = await post(API_URLS.LOGIN, {
-                email: email,
+                username,
                 password,
             });
 

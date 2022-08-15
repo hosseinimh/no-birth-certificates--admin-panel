@@ -40,14 +40,14 @@ const Login = () => {
         setFormData(null);
 
         setFormData({
-            email: data.email,
+            username: data.username,
             password: data.password,
         });
     };
 
     useEffect(() => {
         if (formData) {
-            dispatch(fetchLoginAction(formData.email, formData.password));
+            dispatch(fetchLoginAction(formData.username, formData.password));
         }
     }, [formData]);
 
@@ -85,7 +85,7 @@ const Login = () => {
                 </label>
                 <div className="input-group has-validation mb-2">
                     <span className="input-group-text">
-                        {field === "email" ? (
+                        {field === "username" ? (
                             <BsEnvelope />
                         ) : (
                             <BsFileEarmarkLock2 />
@@ -128,7 +128,7 @@ const Login = () => {
                             <AlertState />
                             <form>
                                 <div className="row">
-                                    {renderInputRow("email")}
+                                    {renderInputRow("username")}
                                     {renderInputRow("password", "password")}
                                 </div>
                             </form>

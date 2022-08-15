@@ -24,9 +24,9 @@ class UserService extends Service
         return $this->handleGet(Entity::get(auth($gaurd)->user()->id));
     }
 
-    public function getPagination($email, $nameFamily, $page, $pageItems)
+    public function getPagination($username, $nameFamily, $page, $pageItems)
     {
-        return $this->handleGetItems(Entity::getPagination($email, $nameFamily, $nameFamily, $page, $pageItems));
+        return $this->handleGetItems(Entity::getPagination($username, $nameFamily, $nameFamily, $page, $pageItems));
     }
 
     public function update($user, $name, $family)
@@ -46,9 +46,9 @@ class UserService extends Service
         return $this->handleOK();
     }
 
-    public function login($email, $password, $guard = 'web')
+    public function login($username, $password, $guard = 'web')
     {
-        if (!auth($guard)->attempt(['email' => $email, 'password' => $password])) {
+        if (!auth($guard)->attempt(['username' => $username, 'password' => $password])) {
             return $this->handleError(['_error' => __('user.user_not_found'), '_errorCode' => ErrorCodes::USER_NOT_FOUND]);
         }
 

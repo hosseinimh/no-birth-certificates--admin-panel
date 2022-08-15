@@ -11,6 +11,8 @@ const Table = ({
 }) => {
     useEffect(() => {
         renderItems();
+
+        utils.convertNumberToPersion();
     }, [items]);
 
     return (

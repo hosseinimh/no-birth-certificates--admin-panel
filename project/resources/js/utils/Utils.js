@@ -94,6 +94,48 @@ const getLSUser = () => {
 const addCommas = (num) =>
     num?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
+const en2faDigits = (s) =>
+    s
+        ?.toString()
+        .replace(/[0-9]/g, (w) =>
+            String.fromCharCode(w.charCodeAt(0) + 1728)
+        ) ?? "";
+
+const convertNumberToEnglish = (s) =>
+    s?.toString().replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
+
+const convertNumberToPersion = () => {
+    let persian = {
+        0: "۰",
+        1: "۱",
+        2: "۲",
+        3: "۳",
+        4: "۴",
+        5: "۵",
+        6: "۶",
+        7: "۷",
+        8: "۸",
+        9: "۹",
+    };
+
+    function traverse(el) {
+        if (el.nodeType === 3) {
+            var list = el.data.match(/[0-9]/g);
+
+            if (list !== null && list.length !== 0) {
+                for (var i = 0; i < list.length; i++)
+                    el.data = el.data.replace(list[i], persian[list[i]]);
+            }
+        }
+
+        for (var i = 0; i < el.childNodes.length; i++) {
+            traverse(el.childNodes[i]);
+        }
+    }
+
+    traverse(document.body);
+};
+
 const removeNonNumeric = (num) => num?.toString().replace(/[^0-9]/g, "");
 
 const digitInputChange = (setValue, field, event) => {
@@ -111,6 +153,9 @@ const utils = {
     clearLS,
     digitInputChange,
     addCommas,
+    en2faDigits,
+    convertNumberToEnglish,
+    convertNumberToPersion,
     removeNonNumeric,
 };
 

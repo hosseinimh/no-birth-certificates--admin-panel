@@ -18,6 +18,7 @@ export const general = {
     yes: "بله",
     no: "خیر",
     submit: "ثبت",
+    search: "جستجو",
     admin: "مدیر",
     up: "بالا",
     down: "پایین",
@@ -78,7 +79,7 @@ export const sidebar = {
     dashboard: "داشبورد",
     editProfile: "ویرایش پروفایل",
     users: "کاربران",
-    plates: "پلاک‌ها",
+    students: "دانش آموزان",
     changePassword: "تغییر کلمه عبور",
     editUser: "ویرایش کاربر",
     viewUser: "مشاهده کاربر",
@@ -95,7 +96,7 @@ export const loginPage = {
 export const dashboardPage = {
     _title: "داشبورد",
     users: "کاربران",
-    plates: "پلاک‌ها",
+    students: "دانش آموزان",
 };
 
 export const usersPage = {
@@ -131,4 +132,47 @@ export const changePasswordPage = {
     newPassword: "کلمه عبور جدید",
     confirmPassword: "تایید کلمه عبور جدید",
     submitted: "تغییر کلمه عبور با موفقیت انجام گردید.",
+};
+
+export const studentsPage = {
+    _title: "دانش آموزان",
+    name: "نام",
+    family: "نام خانوادگی",
+    nameFamily: "نام / نام خانوادگی",
+    date: "تاریخ ثبت نام",
+    addStudent: "افزودن اطلاعات دانش آموز",
+    editStudent: "ویرایش اطلاعات دانش آموز",
+    removeStudentModalTitle: "حذف اطلاعات دانش آموز",
+    removeStudentModalBody: "آیا مطمئن به حذف اطلاعات این دانش آموز می‌باشید؟",
+    studentRemoved: "حذف اطلاعات دانش آموز با موفقیت انجام گردید.",
+};
+
+export const addStudentPage = {
+    _title: "درج اطلاعات دانش آموز",
+    name: "نام",
+    namePlaceholder: "نام",
+    family: "نام خانوادگی",
+    familyPlaceholder: "نام خانوادگی",
+    address: "آدرس",
+    addressPlaceholder: "آدرس",
+    phone: "شمار تماس",
+    phonePlaceholder: "شمار تماس",
+    date: "تاریخ تولد",
+    dateRequired: "لطفا تاریخ تولد را وارد نمایید.",
+    saved: "درج اطلاعات دانش آموز با موفقیت انجام شد.",
+};
+
+export const editStudentPage = {
+    _title: "ویرایش اطلاعات دانش آموز",
+    name: "نام",
+    namePlaceholder: "نام",
+    family: "نام خانوادگی",
+    familyPlaceholder: "نام خانوادگی",
+    address: "آدرس",
+    addressPlaceholder: "آدرس",
+    phone: "شمار تماس",
+    phonePlaceholder: "شمار تماس",
+    date: "تاریخ تولد",
+    dateRequired: "لطفا تاریخ تولد را وارد نمایید.",
+    saved: "ویرایش اطلاعات دانش آموز با موفقیت انجام شد.",
 };

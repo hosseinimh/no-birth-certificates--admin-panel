@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../server-config.php';
+
 return [
 
     /*
@@ -70,7 +72,7 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+        PUBLIC_PATH . '/storage' => storage_path('app'),
     ],
 
 ];

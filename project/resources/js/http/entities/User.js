@@ -7,12 +7,13 @@ export class User extends Entity {
         super();
     }
 
-    async getPagination(email, name, family, page = 1) {
+    async getPagination(username, name, family, _pn = 1, _pi = 10) {
         return await this.handlePost(API_URLS.FETCH_USERS, {
-            email: email,
+            username: username,
             name: name,
             family: family,
-            page: page,
+            _pn,
+            _pi,
         });
     }
 

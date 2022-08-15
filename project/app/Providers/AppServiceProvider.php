@@ -4,8 +4,10 @@ namespace App\Providers;
 
 use App\Constants\Theme;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use App\Services\DashboardService;
+use App\Services\StudentService;
 use App\Services\UserService;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -41,6 +43,10 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->bind(UserController::class, function ($app) {
             return new UserController($app->make(UserService::class));
+        });
+
+        $this->app->bind(StudentController::class, function ($app) {
+            return new StudentController($app->make(StudentService::class));
         });
     }
 }

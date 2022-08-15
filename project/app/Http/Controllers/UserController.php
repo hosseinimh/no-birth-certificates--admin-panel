@@ -32,7 +32,7 @@ class UserController extends Controller
 
     public function login(LoginRequest $request)
     {
-        return $this->handleJsonResponse($this->service->login($request->email, $request->password));
+        return $this->handleJsonResponse($this->service->login($request->username, $request->password));
     }
 
     public function logout()

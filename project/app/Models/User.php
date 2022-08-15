@@ -18,17 +18,12 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'family',
-        'email',
+        'username',
         'password',
     ];
 
     protected $hidden = [
         'password',
-        'remember_token',
-    ];
-
-    protected $casts = [
-        'email_verified_at' => 'datetime',
     ];
 
     public function setPasswordAttribute(string $password): void
@@ -46,14 +41,9 @@ class User extends Authenticatable
         return self::where('id', $id)->first();
     }
 
-    public static function getPagination(string|null $email, string|null $name, string|null $family, int $page, int $pageItems): mixed
+    public static function getPagination(string|null $username, string|null $name, string|null $family, int $page, int $pageItems): mixed
     {
-        return self::where('email', 'LIKE', '%' . $email . '%')->where('name', 'LIKE', '%' . $name . '%')->orWhere('family', 'LIKE', '%' . $family . '%')->orderBy('family', 'ASC')->orderBy('name', 'ASC')->orderBy('id', 'ASC')->skip(($page - 1) * $pageItems)->take($pageItems)->get();
-    }
-
-    public static function getAll(): mixed
-    {
-        return self::orderBy('family', 'ASC')->orderBy('name', 'ASC')->orderBy('id', 'ASC')->get();
+        return self::where('username', 'LIKE', '%' . $username . '%')->where('name', 'LIKE', '%' . $name . '%')->orWhere('family', 'LIKE', '%' . $family . '%')->orderBy('family', 'ASC')->orderBy('name', 'ASC')->orderBy('id', 'ASC')->skip(($page - 1) * $pageItems)->take($pageItems)->get();
     }
 
     public static function getUsersCount(): int

@@ -6,8 +6,7 @@ import {
     SERVER_URL,
     DASHBOARD_API_URLS,
     USERS_API_URLS,
-    CATEGORIES_API_URLS,
-    BOOKS_API_URLS,
+    STUDENTS_API_URLS,
 } from "./apiUrls";
 
 import {
@@ -27,8 +26,7 @@ export {
     SERVER_URL,
     DASHBOARD_API_URLS,
     USERS_API_URLS,
-    CATEGORIES_API_URLS,
-    BOOKS_API_URLS,
+    STUDENTS_API_URLS,
     rootPath,
     basePath,
     cssPath,
