@@ -1,40 +1,4 @@
-# پنل ادمین جهت ثبت نام مشخصات دانش آموزان فاقد شناسنامه به همراه اولیاء
-<div dir="rtl">
-هدف از طراحی این پروژه، ساخت یک پنل ادمین با استفاده از Laravel, React.js و پایگاه داده MySql است که در آن مشخصات دانش آموزان فاقد شناسنامه ای که مایلند در مدارس ثبت نام کنند به انضمام مشخصات ولی ذخیره و نگهداری شده تا از بانک اطلاعاتی تهیه شده در سال های آتی نیز استفاده نمود.
-</div>
+# Admin panel for registering no-birth-certificate students as well as their parents or relatives
 
-
-# API Resource REST-API WordPress plugin, widget, shortcode and 'Entries Details' page 
-
-A simple project fetches data from REST API resource and show with plugin.
-
-## Plugin
-
-Plugin name is `Api Resource`.
-
-Key classes are in `includes` directory.
-
-### Widget
-
-Widget name is `API Resource Widget`.
-
-The plugin fetches the list of books by `GET` request from API endpoint.
-The widget, then shows the number of books.
-
-### shortcode
-
-shortcode name is `[api_resource_entries]`.
-
-It shows books names as unodered list (`ul`).
-
-[hoo](adasdasd)
-
-### Entries Details page
-The page title is `Entries details`.
-
-It shows full list of books including image, description, extra info, category title, tags.
-
-
-
-
-
+## Brief
+This project is deigned by `Laravel` as backend and `React.js` as frontend. `MySql` is used for storing data. Before registering no-birth-certificate students in schools, they must have an official letter, which is written down their names and parents. Its good to have a database of such students and their family. On the other hand the number of these students are a lot and issuing an official letter for that is routine so I decided to create a website for it.
