@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Helpers\Helper;
+use App\Models\Relative;
 use App\Models\Student;
 use App\Models\User;
 use Illuminate\Console\Command;
@@ -22,7 +23,7 @@ class ProjectInit extends Command
      *
      * @var string
      */
-    protected $description = 'Initialize the project with fake data ...';
+    protected $description = 'Initializing the project with fake data ...';
 
     /**
      * Create a new command instance.
@@ -49,26 +50,20 @@ class ProjectInit extends Command
         Artisan::call('config:clear');
         Artisan::call('view:clear');
         $this->info('Cache was cleared successfully.');
-        $this->info('');
-
-        Artisan::call('migrate:fresh');
-        $this->info('Database tables were created successfully.');
-        $this->info('');
 
         Helper::deleteAll(storage_path('app') . '/public/storage');
         $this->info('Old uploaded files were deleted successfully.');
-        $this->info('');
 
         @mkdir(storage_path('app') . '/public/storage');
         Artisan::call('storage:link');
         $this->info('Symbolic links were created successfully.');
-        $this->info('');
 
-        User::factory()->create();
+        $this->comment('Creating tables and seeding data ...');
+        Artisan::call('migrate:fresh --seed');
+        $this->info('Database tables were created successfully.');
         $this->info('1 user was created successfully.');
-
-        Student::factory()->count(100)->create();
         $this->info('100 students were created successfully.');
+        $this->info('700 relatives were created successfully.');
 
         $this->info('');
         $this->info('****');

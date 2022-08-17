@@ -7,6 +7,9 @@ import ChangePassword from "./User/ChangePassword";
 import Students from "./Student/Students";
 import AddStudent from "./Student/AddStudent";
 import EditStudent from "./Student/EditStudent";
+import Relatives from "./Relative/Relatives";
+import AddRelative from "./Relative/AddRelative";
+import EditRelative from "./Relative/EditRelative";
 
 export {
     Dashboard,
@@ -18,4 +21,7 @@ export {
     Students,
     AddStudent,
     EditStudent,
+    Relatives,
+    AddRelative,
+    EditRelative,
 };

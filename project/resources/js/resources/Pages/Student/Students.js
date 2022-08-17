@@ -13,6 +13,7 @@ import {
     imgPath,
     basePath,
     MESSAGE_CODES,
+    storagePath,
 } from "../../../constants";
 import { studentSearchSchema as schema } from "../../validations";
 import {
@@ -24,7 +25,11 @@ import {
     setMessageAction,
 } from "../../../state/message/messageActions";
 import utils from "../../../utils/Utils";
-import { BsFillFileExcelFill, BsPencilFill } from "react-icons/bs";
+import {
+    BsFillFileExcelFill,
+    BsPencilFill,
+    BsFillFilePersonFill,
+} from "react-icons/bs";
 
 const Students = () => {
     const dispatch = useDispatch();
@@ -109,6 +114,11 @@ const Students = () => {
         setAction("REMOVE");
     };
 
+    const onRelatives = (id) => {
+        setItem(id);
+        setAction("RELATIVES");
+    };
+
     const addStudent = () => {
         navigate(`${basePath}/students/add`);
     };
@@ -138,6 +148,10 @@ const Students = () => {
         removeModal?.show();
 
         dispatch(setLoadingAction(false));
+    };
+
+    const relatives = () => {
+        navigate(`${basePath}/relatives/${item}`);
     };
 
     const reset = () => {
@@ -248,6 +262,8 @@ const Students = () => {
                 editStudent();
             } else if (action === "REMOVE" && !isNaN(item)) {
                 removeStudent();
+            } else if (action === "RELATIVES" && !isNaN(item)) {
+                relatives();
             }
         }
     }, [action]);
@@ -425,12 +441,37 @@ const Students = () => {
                 <tr key={item.id}>
                     <td scope="row">{(pageNumber - 1) * 10 + index + 1}</td>
                     <td>
+                        {item.image && (
+                            <a
+                                href={`${storagePath}/students/images/${item.image}`}
+                                target={"_blank"}
+                                rel="noreferrer"
+                            >
+                                <img
+                                    style={{
+                                        width: 150,
+                                        maxHeight: 150,
+                                        marginLeft: "2rem",
+                                    }}
+                                    src={`${storagePath}/students/images/${item.image}`}
+                                />
+                            </a>
+                        )}
                         {item.name} {item.family}
                     </td>
                     <td style={{ direction: "ltr", textAlign: "right" }}>
                         {item.created_at_fa}
                     </td>
                     <td>
+                        <button
+                            type="button"
+                            className="btn btn-secondary ml-2"
+                            onClick={() => onRelatives(item.id)}
+                            title={strings.relatives}
+                            disabled={layoutState?.loading}
+                        >
+                            <BsFillFilePersonFill />
+                        </button>
                         <button
                             type="button"
                             className="btn btn-secondary ml-2"

@@ -27,7 +27,16 @@ class Student extends Model
             if ($student->image) {
                 @unlink(storage_path('app') . '/public/storage/students/images/' . $student->image);
             }
+
+            foreach ($student->relatives as $relative) {
+                $relative->delete();
+            }
         });
+    }
+
+    public function relatives()
+    {
+        return $this->hasMany(Relative::class);
     }
 
     public static function get(int $id): mixed

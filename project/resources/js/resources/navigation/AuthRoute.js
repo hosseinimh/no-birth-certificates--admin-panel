@@ -79,6 +79,18 @@ function AuthRoute() {
                                 element={<Pages.Students />}
                             />
                             <Route
+                                path={`${basePath}/relatives/add/:studentId`}
+                                element={<Pages.AddRelative />}
+                            />
+                            <Route
+                                path={`${basePath}/relatives/edit/:relativeId`}
+                                element={<Pages.EditRelative />}
+                            />
+                            <Route
+                                path={`${basePath}/relatives/:studentId`}
+                                element={<Pages.Relatives />}
+                            />
+                            <Route
                                 path={`${basePath}`}
                                 element={<Pages.Dashboard />}
                             />

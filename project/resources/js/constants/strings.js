@@ -140,6 +140,7 @@ export const studentsPage = {
     family: "نام خانوادگی",
     nameFamily: "نام / نام خانوادگی",
     date: "تاریخ ثبت نام",
+    relatives: "اولیاء / وابستگان",
     addStudent: "افزودن اطلاعات دانش آموز",
     editStudent: "ویرایش اطلاعات دانش آموز",
     removeStudentModalTitle: "حذف اطلاعات دانش آموز",
@@ -175,4 +176,58 @@ export const editStudentPage = {
     date: "تاریخ تولد",
     dateRequired: "لطفا تاریخ تولد را وارد نمایید.",
     saved: "ویرایش اطلاعات دانش آموز با موفقیت انجام شد.",
+};
+
+export const relativesPage = {
+    _title: "اولیاء - وابستگان دانش آموز",
+    name: "نام",
+    family: "نام خانوادگی",
+    relationText: "نسبت خانوادگی",
+    nameFamily: "نام / نام خانوادگی",
+    addRelative: "افزودن اطلاعات ولی - اقوام",
+    editRelative: "ویرایش اطلاعات ولی - اقوام",
+    removeRelativeModalTitle: "حذف اطلاعات ولی - اقوام",
+    removeRelativeModalBody:
+        "آیا مطمئن به حذف اطلاعات این ولی - اقوام می‌باشید؟",
+    relativeRemoved: "حذف اطلاعات ولی - اقوام با موفقیت انجام گردید.",
+};
+
+export const addRelivePage = {
+    _title: "درج اطلاعات ولی - اقوام دانش آموز",
+    name: "نام",
+    namePlaceholder: "نام",
+    family: "نام خانوادگی",
+    familyPlaceholder: "نام خانوادگی",
+    date: "تاریخ تولد",
+    dateRequired: "لطفا تاریخ تولد را وارد نمایید.",
+    relation: "نسبت",
+    relationText: "نسبت با دانش آموز",
+    relationTextPlaceholder: "نسبت با دانش آموز",
+    image: "تصویر",
+    saved: "درج اطلاعات دانش آموز با موفقیت انجام شد.",
+};
+
+export const editRelivePage = {
+    _title: "ویرایش اطلاعات ولی - اقوام دانش آموز",
+    name: "نام",
+    namePlaceholder: "نام",
+    family: "نام خانوادگی",
+    familyPlaceholder: "نام خانوادگی",
+    date: "تاریخ تولد",
+    dateRequired: "لطفا تاریخ تولد را وارد نمایید.",
+    relation: "نسبت",
+    relationText: "نسبت با دانش آموز",
+    relationTextPlaceholder: "نسبت با دانش آموز",
+    image: "تصویر",
+    saved: "ویرایش اطلاعات دانش آموز با موفقیت انجام شد.",
+};
+
+export const relativesTitle = {
+    father: "پدر",
+    mother: "مادر",
+    brother: "برادر",
+    sister: "خواهر",
+    grandFather: "پدربزرگ",
+    grandMother: "مادربزرگ",
+    other: "سایر",
 };

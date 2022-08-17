@@ -26,3 +26,11 @@ export const STUDENTS_API_URLS = {
     UPDATE_STUDENT: `${SERVER_URL}/students/update`,
     REMOVE_STUDENT: `${SERVER_URL}/students/remove`,
 };
+
+export const RELATIVES_API_URLS = {
+    FETCH_RELATIVE: `${SERVER_URL}/relatives/show`,
+    FETCH_RELATIVES: `${SERVER_URL}/relatives`,
+    STORE_RELATIVE: `${SERVER_URL}/relatives/store`,
+    UPDATE_RELATIVE: `${SERVER_URL}/relatives/update`,
+    REMOVE_RELATIVE: `${SERVER_URL}/relatives/remove`,
+};

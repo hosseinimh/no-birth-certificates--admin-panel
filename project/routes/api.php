@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RelativeController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -25,4 +26,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('students/store', [StudentController::class, 'store']);
     Route::post('students/update/{student}', [StudentController::class, 'update']);
     Route::post('students/remove/{student}', [StudentController::class, 'remove']);
+
+    Route::post('relatives/{student}', [RelativeController::class, 'index']);
+    Route::post('relatives/show/{relative}', [RelativeController::class, 'show']);
+    Route::post('relatives/store/{student}', [RelativeController::class, 'store']);
+    Route::post('relatives/update/{relative}', [RelativeController::class, 'update']);
+    Route::post('relatives/remove/{relative}', [RelativeController::class, 'remove']);
 });

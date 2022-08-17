@@ -2,6 +2,7 @@ const rootPath = "/";
 const basePath = "/panel";
 const cssPath = "/assets/css";
 const imgPath = "/assets/img";
+const storagePath = "/storage";
 const iconsPath = "/assets/icons";
 const favIconsPath = "/assets/favicon";
 const jsPath = "/assets/js";
@@ -14,6 +15,7 @@ export {
     basePath,
     cssPath,
     imgPath,
+    storagePath,
     iconsPath,
     favIconsPath,
     jsPath,

@@ -15,6 +15,7 @@ class StudentResource extends JsonResource
             'family' => $this->family ?? '',
             'address' => $this->address ?? '',
             'phone' => $this->phone ?? '',
+            'image' => $this->image ?? null,
             'created_at_fa' => Helper::faDate($this->created_at),
         ];
     }

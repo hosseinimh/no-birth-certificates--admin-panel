@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Helpers\Helper;
-use App\Models\Student as Entity;
 use App\Http\Resources\StudentResource as EntityResource;
 use App\Models\Student;
 
@@ -21,7 +20,7 @@ class StudentService extends Service
 
     public function getPagination($nameFamily, $page, $pageItems)
     {
-        return $this->handleGetItems(Entity::getPagination($nameFamily, $nameFamily, $page, $pageItems));
+        return $this->handleGetItems(Student::getPagination($nameFamily, $nameFamily, $page, $pageItems));
     }
 
     public function store($name, $family, $address, $phone, $date)
@@ -35,7 +34,7 @@ class StudentService extends Service
             'birth_date_timestamp' => Helper::getTimestamp($date)
         ];
 
-        $student = Entity::create($data);
+        $student = Student::create($data);
         $result = $this->handleStore($student);
 
         if ($student) {
@@ -45,7 +44,7 @@ class StudentService extends Service
         return $result;
     }
 
-    public function update(Entity $student, $name, $family, $address, $phone, $date)
+    public function update(Student $student, $name, $family, $address, $phone, $date)
     {
         $data = [
             'name' => $name,
@@ -68,7 +67,7 @@ class StudentService extends Service
 
     public function count($nameFamily)
     {
-        return Entity::getStudentsCount($nameFamily);
+        return Student::getStudentsCount($nameFamily);
     }
 
     public function remove($student)

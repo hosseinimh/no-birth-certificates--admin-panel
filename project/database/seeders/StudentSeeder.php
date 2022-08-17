@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Helpers\Helper;
+use App\Models\Relative;
 use App\Models\Student;
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class StudentSeeder extends Seeder
@@ -16,6 +16,14 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
-        Student::factory()->count(100)->create();
+        $date = '1401/01/01';
+        $timestamp = Helper::getTimestamp($date);
+        $data = ['birth_date' => $date, 'birth_date_timestamp' => $timestamp];
+
+        Student::factory(100)->create($data)->each(function ($student) use ($data) {
+            foreach (range(1, 7) as $number) {
+                Relative::factory()->create(array_merge(['student_id' => $student->id, 'relation' => $number], $data));
+            }
+        });
     }
 }

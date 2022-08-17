@@ -7,6 +7,7 @@ import {
     DASHBOARD_API_URLS,
     USERS_API_URLS,
     STUDENTS_API_URLS,
+    RELATIVES_API_URLS,
 } from "./apiUrls";
 
 import {
@@ -14,6 +15,7 @@ import {
     basePath,
     cssPath,
     imgPath,
+    storagePath,
     iconsPath,
     favIconsPath,
     jsPath,
@@ -27,10 +29,12 @@ export {
     DASHBOARD_API_URLS,
     USERS_API_URLS,
     STUDENTS_API_URLS,
+    RELATIVES_API_URLS,
     rootPath,
     basePath,
     cssPath,
     imgPath,
+    storagePath,
     iconsPath,
     favIconsPath,
     jsPath,
