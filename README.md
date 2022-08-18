@@ -1,9 +1,9 @@
 # Admin panel for registering no-birth-certificate students as well as their parents or relatives
 
 ## Brief
-This project is designed by `Laravel` as backend, `React.js` as frontend and `MySql` for storing data.
+This project is designed with `Laravel` as backend, `React.js` as frontend and `MySql` for storing data.
 
-To register no-birth-certificate students in schools, they must have an official letter, which is written down their names and parents on it, every year. It`s good to have a database of such students and their family members. On the other hand, the number of these students are a lot and issuing an official letter for very of them is routine so I decided to create a website for it to automate some parts of the process.
+To register no-birth-certificate students in schools, they must have an official letter, which is written down their names and parents on it, every year. It`s good to have a database of such students and their family members. On the other hand, the number of these students are a lot and issuing an official letter for very of them is time wasting so I decided to create a website to automate some parts of this routine process.
 
 
 ## Installation
@@ -30,6 +30,7 @@ define('PUBLIC_PATH', __DIR__ . '/../public_html');
 define('FRAMEWORK_PATH', __DIR__);
 ```
 
+### Database configuration
 Also, you have to set the database connection parameters in `.env`:
 ```bash
 DB_CONNECTION=mysql
@@ -40,8 +41,26 @@ DB_USERNAME=root
 DB_PASSWORD=123456
 ```
 
+### Table migrations and fake data initialization
+Go to `project` directory and run this custom command:
+```bash
+php artisan project:init
+```
+This command creates 100 students, which every of them has 7 relatives.
+
+It also creates a user to login:
+```bash
+user: 991061
+password: 1234
+```
+
+To start the `project`, go to the `project` directory and run `artisan serve` command:
+```bash
+php artisan serve
+```
+
 ### Database seeding
-The project has three main models: `User`, `Student`, `Relative`. Since every student may has many relatives, `Relative` is a sub-model of `Student`, so I created `StudentSeeder` to initilize both students and relatives tables with fake data:
+The project has three main models: `User`, `Student` and `Relative`. Since every student has many relatives, `Relative` is a sub-model of `Student`, so I created `StudentSeeder` to initilize both students and relatives tables with fake data:
 ```bash
 public function run()
 {
