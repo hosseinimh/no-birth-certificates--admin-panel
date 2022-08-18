@@ -53,13 +53,13 @@ It also creates a user to login:
 user: 991061
 password: 1234
 ```
-
+### Running the project
 To start the `project`, go to the `project` directory and run `artisan serve` command:
 ```bash
 php artisan serve
 ```
 
-### Database seeding
+## Database seeding
 The project has three main models: `User`, `Student` and `Relative`. Since every student has many relatives, `Relative` is a sub-model of `Student`, so I created `StudentSeeder` to initilize both students and relatives tables with fake data:
 ```bash
 public function run()
@@ -75,3 +75,5 @@ public function run()
     });
 }
 ```
+
+The function creates 100 students and for each of them creates 7 relatives with defferent type of relation. `$data` parameter overwrites on default array in model factory.
