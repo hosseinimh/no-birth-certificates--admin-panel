@@ -7,6 +7,26 @@ To register no-birth-certificate students in schools, they must have an official
 
 
 ## Installation
-There are two main directories in the root: `project` abd `public_html`.
+There are two main directories in the root: `project` and `public_html`.
 
 All logics and Laravel core files are in `project` directory. `public_html` is responsible for representing the website, and all asset files such as images, js files and css are in it.
+
+I created two files in the `project` directory which specify the environment and paths to main directories:
+`server-config.json`, `server-config.php`. If you deploy the project on a subdomain, you can simply change the public_path in both files and we are all set.
+
+### server-config.json
+```bash
+{
+    "relativePublicPath": "./../public_html",
+    "appEnv": "local" // or "production"
+}
+```
+
+### server-config.php
+```bash
+<?php
+
+define('PUBLIC_PATH', __DIR__ . '/../public_html');
+define('FRAMEWORK_PATH', __DIR__);
+```
+
