@@ -60,7 +60,7 @@ php artisan serve
 ```
 
 ## Database seeding
-The project has three main models: `User`, `Student` and `Relative`. Since every student has many relatives, `Relative` is a sub-model of `Student`, so I created `StudentSeeder` to initilize both students and relatives tables with fake data:
+The project has three main models: `User`, `Student` and `Relative`. Since every student has a few relatives, `Relative` is a sub-model of `Student`, so I created `StudentSeeder` to initilize both students and relatives tables with fake data:
 ```bash
 public function run()
 {
@@ -77,3 +77,8 @@ public function run()
 ```
 
 The function creates 100 students and for each of them creates 7 relatives with defferent type of relation. `$data` parameter overwrites on default array in model factory.
+
+## Architecture
+As Laravel is based on MVC, I use another layer called `Service`, which is responsible for all logic operations, so `Controller` layer is just for receiving inputs and representing outputs.
+
+I also use separate classes for validating requests and send them as request inputs to controllers. These classes throw exceptions on invalid input fields, and in `render` function in `Handler` class, it will be catched and based on error, shows the appropriate response.
