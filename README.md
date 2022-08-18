@@ -30,3 +30,29 @@ define('PUBLIC_PATH', __DIR__ . '/../public_html');
 define('FRAMEWORK_PATH', __DIR__);
 ```
 
+Also, you have to set the database connection parameters in `.env`:
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=non_certificates_db
+DB_USERNAME=root
+DB_PASSWORD=123456
+```
+
+### Database seeding
+The project has three main models: `User`, `Student`, `Relative`. Since every student may has many relatives, `Relative` is a sub-model of `Student`, so I created `StudentSeeder` to initilize both students and relatives tables with fake data:
+```bash
+public function run()
+{
+    $date = '1401/01/01';
+    $timestamp = Helper::getTimestamp($date);
+    $data = ['birth_date' => $date, 'birth_date_timestamp' => $timestamp];
+
+    Student::factory(100)->create($data)->each(function ($student) use ($data) {
+        foreach (range(1, 7) as $number) {
+            Relative::factory()->create(array_merge(['student_id' => $student->id, 'relation' => $number], $data));
+        }
+    });
+}
+```
