@@ -24,8 +24,6 @@ I created two files in the `project` directory which specify the environment and
 
 ### server-config.php
 ```bash
-<?php
-
 define('PUBLIC_PATH', __DIR__ . '/../public_html');
 define('FRAMEWORK_PATH', __DIR__);
 ```
@@ -179,6 +177,42 @@ POST /api/users
 | `name`    | `string`  | **Optional**. Name / family of students to search |
 | `_pn`     | `integer` | **Optional**. Page number of list to show         |
 | `_pi`     | `integer` | **Optional**. Items per page                      |
+
+#### Get user
+
+Returns a specific user.
+
+```bash
+POST /api/users/show/{user}
+```
+
+| Parameter | Type      | Description                           |
+| :-------- | :-------- | :------------------------------------ |
+| `user`    | `integer` | **Required**. Id of user to fetch     |
+
+#### Update user
+
+Updates a specific user.
+
+```bash
+POST /api/users/update/{user}
+```
+
+| Parameter | Type      | Description                           |
+| :-------- | :-------- | :------------------------------------ |
+| `user`    | `integer` | **Required**. Id of user to update    |
+
+#### Change password of user
+
+Changes password of a specific user.
+
+```bash
+POST /api/users/change_password/{user}
+```
+
+| Parameter | Type      | Description                                 |
+| :-------- | :-------- | :------------------------------------       |
+| `user`    | `integer` | **Required**. Id of user to change password |
 
 #### Get student
 
