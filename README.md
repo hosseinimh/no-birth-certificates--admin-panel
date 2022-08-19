@@ -50,8 +50,8 @@ This command creates 100 students, which every student has 7 relatives (Father, 
 
 It also creates a user to login:
 ```bash
-<b>user</b>: 991061
-**password**: 1234
+user: 991061
+password: 1234
 
 ## Database seeding
 The project has three main models: `User`, `Student` and `Relative`. Since every student has a few relatives, `Relative` is a sub-model of `Student`, so I created `StudentSeeder` to initialize both students and relatives tables with fake data:
