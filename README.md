@@ -148,7 +148,53 @@ If you don't want to reset your database data and initialize the project anymore
   Route::get('initialize', [Controller::class, 'initialize']);
 ```
 
-## Architecture
+## API Reference
+
+### Resources
+
+#### Get all categories
+
+```bash
+  GET /api/categories
+```
+
+Returns list of all categories.
+
+#### Get category
+
+Returns a specific category.
+
+```bash
+  GET /api/categories/${id}
+```
+
+| Parameter | Type      | Description                           |
+| :-------- | :-------- | :------------------------------------ |
+| `id`      | `integer` | **Required**. Id of category to fetch |
+
+#### Get all books
+
+Returns list of all books.
+
+```bash
+  GET /api/books
+```
+
+#### Get book
+
+Returns a specific category.
+
+```bash
+  GET /api/books/${id}
+```
+
+| Parameter | Type      | Description                       |
+| :-------- | :-------- | :-------------------------------- |
+| `id`      | `integer` | **Required**. Id of book to fetch |
+
+## Documentation
+
+### Architecture
 As Laravel is based on MVC, I use another layer called `Service`, which is responsible for all logic operations, so `Controller` layer is just for receiving inputs and representing outputs.
 
 I also use separate classes for validating requests and send them as request inputs to controllers. These classes throw exceptions on invalid input fields, and in `render` function in `Handler` class, it will be catched and based on error, shows the appropriate response.
