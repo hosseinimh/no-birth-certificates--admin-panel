@@ -152,13 +152,18 @@ If you don't want to reset your database data and initialize the project anymore
 
 ### Resources
 
-#### Get all categories
+#### Login user
 
 ```bash
-  GET /api/categories
+  POST /api/users/login
 ```
 
-Returns list of all categories.
+| Parameter | Type      | Description                           |
+| :-------- | :-------- | :------------------------------------ |
+| `username`      | `string` | **Required**. Username of user to login |
+| `password`      | `string` | **Required**. Password of user to login |
+
+Logins a user with `username` and `password` and returns the auth user if credentials are valid.
 
 #### Get category
 
