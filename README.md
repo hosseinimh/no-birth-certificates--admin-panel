@@ -246,3 +246,96 @@ POST /api/students
 As Laravel is based on MVC, I use another layer called `Service`, which is responsible for all logic operations, so `Controller` layer is just for receiving inputs and representing outputs.
 
 I also use separate classes for validating requests and send them as request inputs to controllers. These classes throw exceptions on invalid input fields, and in `render` function in `Handler` class, it will be catched and based on error, shows the appropriate response.
+
+The project uses `API Resources` as `Repositories` to standardize responses.
+It also utilizes Laravel ORM, `Eloquent`, for readability and integration.
+
+#### Database
+
+The project uses `MySQL` which is an open-source relational database management system.
+
+#### sanctum
+
+As API calls are stateless, sessions can't be used to identify users.
+I use `sanctum` to authenticate and authorize users.
+On the backend, I use `middlewares` to handle users accessing endpoint routes.
+
+#### Application state container
+
+Redux is an open-source JavaScript library for managing and centralizing application state. Redux is used for notifications, the current user properties, the current page the user is in, and so on.
+
+#### UI
+
+The project utilizes [coreui](https://coreui.io/) which is a free Bootstrap Admin Dashboard Template, and I made some changes to it.
+
+For frontend validation, the project uses Yup which is a schema builder for runtime value parsing and validation.
+
+### Programming languages
+
+-   PHP 8.0.2
+-   Laravel framework 9.19
+-   React 18.2.0
+
+### Technologies & features
+
+-   MVC architecture
+-   Service layer
+-   Repository pattern
+-   Middleware
+-   Service container binding
+-   Dependency injection
+-   Route model binding
+-   Migration
+-   Database seeding
+-   Model factory
+-   sanctum
+-   Artisan CLI
+-   Custom console command
+-   Custom request validator
+-   Storage
+-   Symbolic links
+-   Exception handling
+-   Error logging
+-   Localization
+-   Redux
+-   React Router
+-   Axios
+-   Yup
+-   Local storage
+-   Bootstrap
+
+## Authors
+
+-   [@hosseinimh](https://www.github.com/hosseinimh)
+
+API Resource was designed, implemented, documented, and maintained by Mahmoud Hosseini, a Full Stack developer.
+
+-   Email: hosseinimh@gmail.com
+
+-   Twitter: [@hosseinimh](https://twitter.com/hosseinimh)
+
+## Badges
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
+## 🔗 Links
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://hosseinimh.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoud-hosseini-553324217)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/hosseinimh)
+
+## 🚀 About Me
+
+**Mahmoud Hosseini**
+
+![Logo](https://api-resource.hosseinimh.com/github/img/hosseinimh.jpg)
+
+I'm a Full Stack developer coding Php Laravel, React.JS, C#, ...
+
+Learning programming for more than 18 years.
+
+## 🛠 Skills
+
+Javascript, HTML, CSS, Sass, Bootstrap, Material UI, React.JS, React native, PHP Laravel, PHP Codeigniter, WordPress, ...
