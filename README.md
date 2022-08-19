@@ -155,47 +155,56 @@ If you don't want to reset your database data and initialize the project anymore
 #### Login user
 
 ```bash
-  POST /api/users/login
+POST /api/users/login
 ```
 
-| Parameter | Type      | Description                           |
-| :-------- | :-------- | :------------------------------------ |
-| `username`      | `string` | **Required**. Username of user to login |
-| `password`      | `string` | **Required**. Password of user to login |
+| Parameter | Type      | Description                             |
+| :-------- | :-------- | :------------------------------------   |
+| `username`| `string`  | **Required**. Username of user to login |
+| `password`| `string`  | **Required**. Password of user to login |
 
 Logins a user with `username` and `password` and returns the auth user if credentials are valid.
 
-#### Get category
+#### Get users
 
-Returns a specific category.
+Returns list of users.
 
 ```bash
-  GET /api/categories/${id}
+POST /api/users
+```
+
+| Parameter | Type      | Description                                       |
+| :-------- | :-------- | :------------------------------------             |
+| `email`   | `string`  | **Optional**. Email of students to search         |
+| `name`    | `string`  | **Optional**. Name / family of students to search |
+| `_pn`     | `integer` | **Optional**. Page number of list to show         |
+| `_pi`     | `integer` | **Optional**. Items per page                      |
+
+#### Get student
+
+Returns a specific student.
+
+```bash
+POST /api/students/show/{student}
 ```
 
 | Parameter | Type      | Description                           |
 | :-------- | :-------- | :------------------------------------ |
-| `id`      | `integer` | **Required**. Id of category to fetch |
+| `student` | `integer` | **Required**. Id of student to fetch  |
 
-#### Get all books
+#### Get students
 
-Returns list of all books.
-
-```bash
-  GET /api/books
-```
-
-#### Get book
-
-Returns a specific category.
+Returns list of students.
 
 ```bash
-  GET /api/books/${id}
+POST /api/students
 ```
 
-| Parameter | Type      | Description                       |
-| :-------- | :-------- | :-------------------------------- |
-| `id`      | `integer` | **Required**. Id of book to fetch |
+| Parameter | Type      | Description                               |
+| :-------- | :-------- | :------------------------------------     |
+| `name`    | `string`  | **Optional**. Name of students to search  |
+| `_pn`     | `integer` | **Optional**. Page number of list to show |
+| `_pi`     | `integer` | **Optional**. Items per page              |
 
 ## Documentation
 
