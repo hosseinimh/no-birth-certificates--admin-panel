@@ -50,7 +50,7 @@ This command creates 100 students, which every student has 7 relatives (Father, 
 
 It also creates a user to login:
 ```bash
-**user**: 991061
+<b>user</b>: 991061
 **password**: 1234
 
 ## Database seeding
