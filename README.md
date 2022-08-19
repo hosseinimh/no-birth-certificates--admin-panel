@@ -41,26 +41,20 @@ DB_USERNAME=root
 DB_PASSWORD=123456
 ```
 
-### Table migrations and fake data initialization
-Go to `project` directory and run this custom command:
+### Tables migrations and fake data initialization
+Go to the `project` directory and run this custom command:
 ```bash
 php artisan project:init
 ```
-This command creates 100 students, which every of them has 7 relatives.
+This command creates 100 students, which every student has 7 relatives (Father, mother, brother, sister, grandfather, grandmother and other).
 
 It also creates a user to login:
 ```bash
-user: 991061
-password: 1234
-```
-### Running the project
-To start the `project`, go to the `project` directory and run `artisan serve` command:
-```bash
-php artisan serve
-```
+**user**: 991061
+**password**: 1234
 
 ## Database seeding
-The project has three main models: `User`, `Student` and `Relative`. Since every student has a few relatives, `Relative` is a sub-model of `Student`, so I created `StudentSeeder` to initilize both students and relatives tables with fake data:
+The project has three main models: `User`, `Student` and `Relative`. Since every student has a few relatives, `Relative` is a sub-model of `Student`, so I created `StudentSeeder` to initialize both students and relatives tables with fake data:
 ```bash
 public function run()
 {
@@ -70,13 +64,89 @@ public function run()
 
     Student::factory(100)->create($data)->each(function ($student) use ($data) {
         foreach (range(1, 7) as $number) {
-            Relative::factory()->create(array_merge(['student_id' => $student->id, 'relation' => $number], $data));
+            Relative::factory()->create(
+                array_merge([
+                    'student_id' => $student->id,
+                    'relation' => $number,
+                    'relation_text' => $number === 7 ? __('relative.relation_7') : null,
+                ], $data)
+            );
         }
     });
 }
 ```
 
 The function creates 100 students and for each of them creates 7 relatives with defferent type of relation. `$data` parameter overwrites on default array in model factory.
+
+## Deployment
+
+To start the project on the server, just open your website:
+
+```bash
+  GET /
+```
+
+Or go to the `project` directory and run `artisan serve` command on localhost:
+
+```bash
+  php artisan serve
+```
+
+As mentioned before, default credentials are:
+
+**username:** 991061
+
+**password:** 1234
+
+### Initialization
+
+If you're on a server, go to `/initialize`:
+
+```bash
+  GET /initialize
+```
+
+If you're on localhost, you have two options to initialize the project:
+
+-   Go to `/initialize`
+
+```bash
+  GET /initialize
+```
+
+-   Or simply run a custom artisan console command, `project:init`:
+
+```bash
+php artisan project:init
+```
+
+If everything goes well, the output will be like this:
+
+```bash
+Initializing the project with fake data ...
+
+Cache was cleared successfully.
+Old uploaded files were deleted successfully.
+Symbolic links were created successfully.
+Creating tables and seeding data ...
+Database tables were created successfully.
+1 user was created successfully.
+100 students were created successfully.
+700 relatives were created successfully.
+
+****
+Username: 991061
+Password: 1234
+****
+
+READY TO GO!
+```
+
+If you don't want to reset your database data and initialize the project anymore, just remove this line in `routes/web.php`:
+
+```bash
+  Route::get('initialize', [Controller::class, 'initialize']);
+```
 
 ## Architecture
 As Laravel is based on MVC, I use another layer called `Service`, which is responsible for all logic operations, so `Controller` layer is just for receiving inputs and representing outputs.
